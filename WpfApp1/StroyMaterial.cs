@@ -19,6 +19,7 @@ namespace WpfApp1
         public string EdIzm { get; set; }
         public int Ost { get; set; }
         public int SkladNum { get; set; }
+        public Nullable<System.DateTime> UpdateDate { get; set; }
     
         public virtual Sklad Sklad { get; set; }
     }
