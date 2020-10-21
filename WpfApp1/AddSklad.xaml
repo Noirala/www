@@ -10,6 +10,8 @@
 
     <Grid>
         <StackPanel>
+            <Label Opacity="{Binding CurrentSklad.num}" Background="Yellow" Content="Editing"/>
+
             <Label Content="Nomer Sklada"/>
             <TextBox Text="{Binding CurrentSklad.num}"/>
             <Label Content="Adress"/>

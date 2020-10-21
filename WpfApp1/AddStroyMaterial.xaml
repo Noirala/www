@@ -10,6 +10,7 @@
 
     <Grid>
         <StackPanel>
+            <Label Opacity="{Binding CurrentStroyMaterial.Num}" Background="Yellow" Content="Editing"/>
             <Label Content="Номер материала"/>
             <TextBox Text="{Binding CurrentStroyMaterial.Num}"/>
             <Label Content="Nazvanie"/>

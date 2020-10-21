@@ -99,5 +99,10 @@ namespace WpfApp1
         {
             MainFrame.Navigate(new AddSklad((sender as ListView).SelectedItem as Sklad));
         }
+
+        private void SMTButton_Click(object sender, RoutedEventArgs e)
+        {
+            TableFrame.Navigate(new StroyMaterialPage(MyElements));
+        }
     }
 }

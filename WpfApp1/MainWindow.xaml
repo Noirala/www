@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="Auto" Width="Auto">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
@@ -34,10 +35,11 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Column="3">
-            <Button Grid.Column="3" x:Name="AddButton" Content="StroyMaterial" Click="AddButton_Click"/>
-            <Button x:Name="Add_Sklad" Content="Sklad" Grid.Column="3"  Click="Add_Sklad_Click"/>
+            <Button x:Name="AddButton" Content="StroyMaterial" Click="AddButton_Click"/>
+            <Button x:Name="Add_Sklad" Content="Sklad" Click="Add_Sklad_Click"/>
+            <Button Content="StroyMaterial Table" Name="SMTButton" Click="SMTButton_Click"/>
         </StackPanel>
-
+        <Frame x:Name="TableFrame" Grid.Column="4"/>
         <Frame x:Name="MainFrame" Grid.Column="0"/>
     </Grid>
 </Window>
