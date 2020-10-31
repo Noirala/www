@@ -20,7 +20,7 @@
           </Key>
           <Property Name="Num" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="EdIzm" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Edlzm" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Ost" Type="int" Nullable="false" />
           <Property Name="SkladNum" Type="int" Nullable="false" />
           <Property Name="UpdateDate" Type="date" />
@@ -110,10 +110,10 @@
           <EntitySetMapping Name="StroyMaterial">
             <EntityTypeMapping TypeName="rlarModel.StroyMaterial">
               <MappingFragment StoreEntitySet="StroyMaterial">
+                <ScalarProperty Name="EdIzm" ColumnName="Edlzm" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
                 <ScalarProperty Name="Num" ColumnName="Num" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="EdIzm" ColumnName="EdIzm" />
                 <ScalarProperty Name="Ost" ColumnName="Ost" />
                 <ScalarProperty Name="SkladNum" ColumnName="SkladNum" />
               </MappingFragment>

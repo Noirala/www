@@ -104,5 +104,31 @@ namespace WpfApp1
         {
             TableFrame.Navigate(new StroyMaterialPage(MyElements));
         }
+
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            var sklad = Core.DB.Sklad.FirstOrDefault();
+            if(sklad!=null)
+                foreach (var sm in sklad.StroyMaterial) {
+                    Console.WriteLine(sm.Title);
+                }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = SearchTextBox.Text;
+            //Console.WriteLine(searchText);
+            MyElements = Core.DB.StroyMaterial.Where(sm => sm.Title.Contains(searchText)).ToList();
+            MainListView.ItemsSource = MyElements;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if ((sender as RadioButton).Tag.ToString() == "1")
+                MyElements = Core.DB.StroyMaterial.OrderByDescending(sm => sm.Title).ToList();
+            else
+                MyElements = Core.DB.StroyMaterial.OrderBy(sm => sm.Title).ToList();
+            MainListView.ItemsSource = MyElements;
+        }
     }
 }
